@@ -22,10 +22,16 @@ const JobScriptForm = () => {
                 args: [url, formattedDate, mode, ...jobIdsArray],
             });
             setResponse(res.data.output);
+    
+            // Display updated URLs
+            if (res.data.updatedJobUrls) {
+                setResponse(`Updated job URLs:\n${res.data.updatedJobUrls.join('\n')}`);
+            }
         } catch (err) {
             setResponse('Error occurred: ' + err.message);
         }
     };
+    
     
 
     return (
