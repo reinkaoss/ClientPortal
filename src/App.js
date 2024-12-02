@@ -3,20 +3,21 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import JobScriptForm from './components/JobScriptForm'; 
 import Instructions from './components/Instructions'; 
 import { NavLink } from 'react-router-dom';
+import './components/styles/navbar.css';
 
 function App() {
   return (
     <Router>
       <div>
         {/* Navigation Bar */}
-        <nav>
-          <ul>
-            <li>
+        <nav className='navbar'>
+          <ul className='navbarUL'>
+            <li className='navbarLI'>
             <NavLink to="/" exact activeClassName="active-link">
-            JobScriptForm
+            Adjust Deadlines
       </NavLink>
     </li>
-    <li>
+    <li className='navbarLI'>
       <NavLink to="/instructions" activeClassName="active-link">
       Instructions
       </NavLink>
@@ -35,3 +36,4 @@ function App() {
 }
 
 export default App;
+
