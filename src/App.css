@@ -13,6 +13,11 @@
   }
 }
 
+.active-link {
+  font-weight: bold;
+  color: #007BFF;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
